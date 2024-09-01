@@ -16,7 +16,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version> <!-- Set to Java 11 -->
+        <java.version>11</java.version> <!-- Java version 11 -->
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     </properties>
 
@@ -120,7 +120,7 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.1.2184</version> <!-- Example version compatible with Java 11 -->
+                <version>3.7.0.1746</version> <!-- Version compatible with Java 11 -->
             </plugin>
         </plugins>
     </build>
