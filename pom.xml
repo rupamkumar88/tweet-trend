@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>11</java.version> <!-- Set to Java 11 -->
-        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version> <!-- Compatible with Java 11 -->
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     </properties>
 
     <dependencies>
@@ -30,13 +30,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.kohsuke/github-api -->
         <dependency>
             <groupId>org.kohsuke</groupId>
             <artifactId>github-api</artifactId>
             <version>1.99</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core -->
         <dependency>
             <groupId>org.twitter4j</groupId>
             <artifactId>twitter4j-core</artifactId>
@@ -85,7 +83,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Compatible with Java 11 -->
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -102,7 +100,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version> <!-- Compatible with Java 11 -->
+                <version>0.8.2</version>
                 <executions>
                     <execution>
                         <goals>
@@ -118,6 +116,12 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- SonarQube Scanner Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version> <!-- Example version compatible with Java 11 -->
+            </plugin>
         </plugins>
     </build>
 
@@ -125,7 +129,4 @@
         <repository>
             <id>dev</id>
             <url>file://jarstaging</url>
-        </repository>
-    </distributionManagement>
-
-</project>
+        </
